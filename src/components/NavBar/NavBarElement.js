@@ -3,7 +3,7 @@ import {Link as LinkRouter} from 'react-router-dom';
 import {Link as LinkScrol} from 'react-scroll';
 
 export const Nav = styled.nav`
-background : #000;
+background :${({scrollNav})=>(scrollNav ? '#000' :'transparent' )} ;
 height : 80px;
 margin-top: -80px;
 display:flex ;
@@ -106,7 +106,7 @@ cursor:pointer;
 transition: all 0.2s ease-in-out;
 text-decoration: none;
 
- &.hover{
+ &:hover{
    transition : all 0.2s ease-in-out;
    background: #fff;
    color: #010606;
